@@ -16,7 +16,7 @@ fn main() -> Result<(), Error> {
         env!("CARGO_PKG_VERSION_PATCH"),
         option_env!("CARGO_PKG_VERSION_PRE").unwrap_or("")
     );
-    let matches = App::new("ontio-wasm-build")
+    let matches = App::new("bithumb-chain-wasm-build")
         .about("does awesome things")
         .version(version.as_str())
         .arg(

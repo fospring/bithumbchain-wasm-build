@@ -97,6 +97,12 @@ const SIGNATURES: [(&str, &[ValueType], Option<ValueType>); 24] = [
     ("ontio_storage_delete", &[ValueType::I32; 2], None),
     ("ontio_debug", &[ValueType::I32; 2], None),
     ("ontio_sha256", &[ValueType::I32; 3], None),
+    ("input_length", &[], Some(ValueType::I32)),
+    ("ret", &[ValueType::I32; 2], None),
+    ("storage_read", &[ValueType::I32; 6], Some(ValueType::I32)),
+    ("storage_write", &[ValueType::I32; 4], None),
+    ("blockhash", &[ValueType::I32; 2], None),
+    ("elog", &[ValueType::I32; 2], None),
 ];
 
 fn check_import_section(module: &Module) -> Result<(), Error> {
